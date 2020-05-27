@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Inspire</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+</head>
+
+<body id="bg-image" class="bg-secondary">
+	<header class="container-fluid mr-3">
+		<div class="row text-white text-shadow">
+			<div class="col-12 text-right">
+				<div id="weather" class="mt-3 mr-3">
+				</div>
+			</div>
+	</header>
+
+	<main class="container-fluid mb-3">
+		<div class="row">
+			<div class="col-12 text-center m-auto text-white text-shadow">
+				<div>
+					<p id="clock"></p>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<div class="row">
+		<div class="offset-10 col-2 text-white bg-dark card shadow">
+			<div class="card-header text-center" id="remaining"></div>
+			<div class="card-body" id="todos"></div>
+				<form onsubmit="app.todoController.addTodo(event)">
+					<div class="form-group d-flex">
+						<input type="text" class="bg-dark text-white form-control" name="todo" id="todo" placeholder="Add Todo" required> <!-- THIS IS SHOULD BE CALLED DESCRIPTION IN THE CONTROLLER TO MATCH UP WITH THE STORE AND API-->
+						<button type="submit" class="btn ml-2 btn-outline-success"><i class="fas fa-plus "></i></button>
+					  </div>
+				</form>
+			</div>
+			<div id="todo-error"></div>
+		</div>
+	</div>
+
+	<footer class="container-fluid mb-3 text-white text-shadow">
+		<div class="row">
+			<div class="col-12">
+				<div id="quote">
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="https://kit.fontawesome.com/68f8809237.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+	<script type="module" src="app/main.js"></script>
+</body>
+
+</html>
